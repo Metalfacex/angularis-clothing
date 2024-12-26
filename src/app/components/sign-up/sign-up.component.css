@@ -1,0 +1,76 @@
+.conteiner{
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 600px;
+    height: 837px;
+}
+.ravi{
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+   
+    display: flex;
+    
+
+}
+
+.regbox{
+    padding-left: 10%;
+   text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    
+}
+
+.personal{
+    
+   
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap:8px;
+    padding-bottom: 8px;
+    
+}
+
+.personal input{
+    
+    width: 70%;
+    height: 40px;
+    border-color: #606060;
+    border-width: 1px;
+    justify-content: center;
+    
+}
+
+.personal button{
+    border: none;
+    width: 70%;
+    height: 40px;
+    background-color: #5A6D57;
+    color: white;
+    
+}
+
+.login{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.login button{
+    
+    width: 98px;
+    border: none;
+    background-color: white;
+    color: #5A6D57;
+    font-size: 18px;
+}

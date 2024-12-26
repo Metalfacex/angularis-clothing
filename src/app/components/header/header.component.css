@@ -1,0 +1,127 @@
+/* General Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: hidden;
+
+
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  flex: 1; /* Ensures proper spacing */
+  cursor: pointer;
+}
+
+.tagline {
+  font-size: 12px;
+  margin-left: 5px;
+  color: #ccc;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex: 2; /* Adjusts size for responsiveness */
+  justify-content: space-around; /* Spaces out menu items evenly */
+}
+
+.navbar li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Allows spacing adjustments */
+  justify-content: flex-end;
+}
+
+.icon {
+  margin: 0 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 5px 0;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  min-width: 150px;
+}
+
+.menu-item{
+  cursor: pointer;
+}
+
+.menu-item:hover .dropdown {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column;
+      align-items: center;
+      display: none; /* Hide the menu by default */
+  }
+
+  .navbar ul.active {
+      display: flex; /* Show the menu when active */
+  }
+
+  .header-icons {
+      order: 1; /* Moves icons to the top on small screens */
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  .logo {
+      text-align: center;
+      width: 100%;
+    cursor: pointer;
+  }
+
+  .menu-item {
+      margin: 10px 0;
+  }
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggle {
+  display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 10px;
+  }
+}

@@ -1,0 +1,88 @@
+.product-info{
+  width: 100%;
+  min-height: 512px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.product-info .content{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+
+.colors{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.circle{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.color{
+  display: flex;
+  gap: 8px;
+}
+
+button{
+  height: 40px;
+  background-color: #5A6D57;
+  border: none;
+  color: #fff;
+}
+
+.wishlist{
+  display: flex;
+  justify-content: space-between;
+  color: #868686;
+}
+
+.comment {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px
+}
+
+.comment mat-expansion-panel{
+  width: 600px;
+}
+
+.products{
+  margin-top: 64px;
+}
+
+.boxes{
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box{
+  width: 392px;
+  height: 540px;
+  cursor: pointer;
+}
+
+.text{
+  margin-top: 5.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="ravi">
+        <img src="https://s3-alpha-sig.figma.com/img/e77c/d2d0/2b04a252f47ea48c67b52281d6c44101?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=P1WnAx1MwxCpcpkLipAfkZzwhGgQy8OWUTCH6QXBbjeRg8sW5mtUoQOw5CV7eEgGVknnMKD9vCWJy0OFTLfNydLKTq1bcCWthQe0-1qurpEcfEHqddoLmuPWZMbDVqsxzVDpWe~g5WIu3w3Y7H-pa652WG9W6uj~7YdFaSxqXaZNUT3Wv5xOFDB3p70uUM2fRLT7ntDP~X5jmPA5MbcBO3-yHBY6KeiSc6-R~ZwWdelN-0RMSsHnOK6w7eeYRNkh6h-65ew~lq6KvKfZF-LwO7bGUQeiVlc0Jj1k~mR9yHTAUWeUhOvG1jmgvjnLFmBuMEQleJeruXznCtwPdqx5-A__" alt="qali zis lamazad">
+        <div class="regbox">
+            <h3>Creat Accaunt</h3>
+            <div class="personal">
+              <form [formGroup]="registerForm">
+                <input type="text" placeholder="First Name" formControlName="firstname">
+                <ng-container *ngIf="registerForm.get('firstname')?.touched">
+                  <p *ngIf="registerForm.get('firstname')?.errors?.['required']">firstname is required</p>
+                </ng-container>
+                <input type="text" placeholder="Last Name" formControlName="lastName">
+                <ng-container *ngIf="registerForm.get('lastName')?.touched">
+                  <p *ngIf="registerForm.get('lastName')?.errors?.['required']">lastName is required</p>
+                </ng-container>
+                <input type="email" placeholder="Email" formControlName="email">
+                <ng-container *ngIf="registerForm.get('email')?.touched">
+                  <p *ngIf="registerForm.get('email')?.errors?.['required']">email is required</p>
+                  <p *ngIf="registerForm.get('email')?.errors?.['email']">email is incorrect</p>
+                </ng-container>
+                <input type="password" placeholder="Password" formControlName="password">
+                <ng-container *ngIf="registerForm.get('password')?.touched">
+                  <p *ngIf="registerForm.get('password')?.errors?.['required']">password is required</p>
+                  <p *ngIf="registerForm.get('password')?.errors?.['minlength']">password min length is 6!</p>
+                </ng-container>
+                <button (click)="onSubmit()" [disabled]="!registerForm.valid">Register Now</button>
+              </form>
+            </div>
+            <div class="login">
+                <p>Already Have An Account?</p>
+                <button type="button"  routerLink="sign-in">Log In</button>
+            </div>
+            <p>or</p>
+            <div class="terms">
+                <p>by clicking register now’’you agree to terms& conditions and privacy policy.  </p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

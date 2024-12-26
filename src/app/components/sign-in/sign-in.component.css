@@ -1,0 +1,49 @@
+.login{
+  width: 100%;
+}
+
+.login-inner{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.login-inner .content{
+  width: 392px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.login-inner .content form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.login-inner .content form input{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #606060;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+.login-inner .content form button{
+  width: 100%;
+  height: 40px;
+  background: #5A6D57;
+  color: #fff;
+  border: none;
+}
+
+.login-inner .content form button[disabled]{
+  cursor: not-allowed;
+}

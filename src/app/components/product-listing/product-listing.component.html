@@ -1,0 +1,110 @@
+<div class="product-listing">
+  <div class="coverIMG"></div>
+
+  <div class="container">
+    <div class="product-listing__inner">
+      <div class="filter">
+        <h3>Filter</h3>
+
+        <div class="box">
+          <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>SortBy</mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li><input type="checkbox"> Featured</li>
+              <li><input type="checkbox"> Best Seller</li>
+              <li><input type="checkbox"> Price: Low To Hight</li>
+              <li><input type="checkbox"> Price: Hight To Low</li>
+            </ul>
+          </mat-expansion-panel>
+        </div>
+
+        <div class="box">
+          <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>Size</mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li><input type="checkbox"> XS / US (0-4)</li>
+              <li><input type="checkbox"> S / US (4-6)</li>
+              <li><input type="checkbox"> M / US (6-10)</li>
+              <li><input type="checkbox"> L / US (10-14)</li>
+              <li><input type="checkbox"> XL / US (12-16)</li>
+            </ul>
+          </mat-expansion-panel>
+        </div>
+
+        <div class="box">
+          <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>Color</mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li><input type="checkbox"> black</li>
+              <li><input type="checkbox"> red</li>
+              <li><input type="checkbox"> green</li>
+              <li><input type="checkbox"> yellow</li>
+              <li><input type="checkbox"> dark blue</li>
+              <li><input type="checkbox"> purple</li>
+              <li><input type="checkbox"> pink</li>
+              <li><input type="checkbox"> light blue</li>
+              <li><input type="checkbox"> orange</li>
+              <li><input type="checkbox"> white</li>
+            </ul>
+          </mat-expansion-panel>
+        </div>
+
+        <div class="box">
+          <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>Collection</mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li><input type="checkbox"> In Stock</li>
+              <li><input type="checkbox"> Out Of Stock</li>
+            </ul>
+          </mat-expansion-panel>
+        </div>
+
+        <div class="box">
+          <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>fabric</mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li><input type="checkbox"> Cotton</li>
+              <li><input type="checkbox"> Linen</li>
+              <li><input type="checkbox"> Wool</li>
+              <li><input type="checkbox"> Silk </li>
+              <li><input type="checkbox"> Cashmere  </li>
+            </ul>
+          </mat-expansion-panel>
+        </div>
+
+
+      </div>
+
+      <div class="products">
+        <div class="product" *ngFor="let product of products | slice: 0: slicer" (click)="goToProduct(product.id)">
+          <img [src]=product?.img alt="" width="392px" height="438px">
+          <div class="text">
+            <div class="left">
+              <h6>{{product?.title}}</h6>
+              <p>turn it up pants</p>
+              <div class="color">
+                <div class="circle" [style.background-color]="color" *ngFor="let color of product?.color"></div>
+              </div>
+            </div>
+            <div class="right">
+              <h6>$ {{product?.price}}</h6>
+            </div>
+          </div>
+
+        </div>
+       <button (click)="addSlice()">Load more</button>
+      </div>
+    </div>
+  </div>
+</div>
+

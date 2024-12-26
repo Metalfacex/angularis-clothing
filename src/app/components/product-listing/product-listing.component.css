@@ -1,0 +1,79 @@
+.product-listing{
+  width: 100%;
+}
+.coverIMG{
+  width: 100%;
+  height: 655px;
+  background-image: url('https://s3-alpha-sig.figma.com/img/4dc3/4782/5b04eda978c9ca84026afb728eb18d0d?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HdqSqeJB9X-POSEz2-K5xVPNpPiXUiWrh7R5UJ9sJ8lFEFXHgoUNHynDJ-zX~FvqRFPOHOVPmsCRFmmhhKPvPoCWxlUZ46HZhNUu7YJmtDb7TK~5MPhcQxg0RD85tcI62RzSij7fjLwdM9IcNA-agPg8WS35LwXtqC2uwHPbtR9A19AGMzMoCPH8rZxYuV2ispaN2CyAFRhwatcQyK3tdwgFqoMFDSAL3PYfUKgBkwnJMHQvgWvu2s-vis1xAS2ECwyHslZ4C1TlG7L3tQbcCjQoRvYlcbuTbyB5aSz9zPXW8tGr7OiKf7OtT~rgt0E2coriDs6T2yr8sarZLyPkjw__');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.product-listing__inner{
+  margin-top: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.filter{
+  position: sticky;
+  top: 20px;
+  width: 392px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+mat-expansion-panel{
+  border: 1px solid #748C70;
+  background: none;
+}
+
+.products{
+  width: calc(1440px - 392px - 30px);
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.product{
+  width: 392px;
+  height: 540px;
+  cursor: pointer;
+}
+
+.text{
+  margin-top: 5.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.products button{
+  width: 184px;
+  height: 40px;
+  border:  1px solid #5A6D57;
+  color: #5A6D57;
+  background: none;
+}
+
+.circle{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.color{
+  display: flex;
+  gap: 8px;
+}

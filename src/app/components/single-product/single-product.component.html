@@ -1,0 +1,82 @@
+<div class="single-product">
+  <div class="container">
+    <div class="single-product__inner">
+      <div class="product-info">
+        <img [src]=product?.img alt="" width="600px" height="512px">
+        <div class="content">
+          <h3>{{product?.title}}</h3>
+          <p>{{product?.description}}</p>
+          <div class="colors">
+            <p>colors</p>
+            <div class="color">
+              <div class="circle" [style.background-color]="color" *ngFor="let color of product?.color"></div>
+            </div>
+          </div>
+            <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+              <mat-expansion-panel-header>
+                <mat-panel-title>Size</mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul>
+                <li *ngFor="let size of product?.size"><input type="checkbox"> {{size}}</li>
+              </ul>
+            </mat-expansion-panel>
+          <button (click)="addToCart()">Add to cart + ${{product?.price}}</button>
+          <div class="wishlist">
+            <p>easy return</p>
+            <p>add to wish list</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="comment">
+        <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>Fitting</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>Fabric :
+            Tailored Stretch,
+            Made in Italy62% Nylon, 38% Elastane, 100% vegan materials
+            Care:
+            Cold machine wash, line dry
+            Do not tumble dry or dry clean, Do not use bleach or fabric softener</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>silk</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>This material is our signature high-stretch fabric that drapes like silk and is soft to the touch. Silk is OEKO-TEX® certified and made in Italy in a mill 100% powered by renewable energy (solar and biomass)</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+          <mat-expansion-panel-header>
+            <mat-panel-title>Product Detail</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>Shipping:
+            is free on US , Canada orders are $175
+            Returns:
+            Unwashed, unworn items are eligible for returns or exchanges within 30 days of purchase. Final Sale items are not eligible for returns or exchanges.</p>
+        </mat-expansion-panel>
+      </div>
+
+      <div class="products">
+        <h3>you may also like</h3>
+        <div class="boxes">
+          <div class="box" *ngFor="let producter of products | slice: 0: 3" (click)="goToProduct(producter.id)">
+            <img [src]=producter?.img alt="" width="392px" height="438px">
+            <div class="text">
+              <div class="left">
+                <h6>{{producter?.title}}</h6>
+                <p>turn it up pants</p>
+                <div class="color">
+                  <div class="circle" [style.background-color]="color" *ngFor="let color of producter?.color"></div>
+                </div>
+              </div>
+              <div class="right">
+                <h6>$ {{producter?.price}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
